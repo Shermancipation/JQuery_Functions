@@ -47,6 +47,31 @@
         $("#addclass").click(function(){
           $("#addclass").addClass("addclass");
         })
+        var newp = $("<p>Here's the thing</p>");
+
+        $("#before").click(function(){
+          $("#beforeh1").before(newp);
+        })
+        var newp2 = $("<p>Here's the other thing</p>");
+
+        $("#after").click(function(){
+          $("#afterh1").after(newp2);
+        })
+
+        $("#append").click(function(){
+          $("#appendp").append("<span>s sentence.</span>");
+        })
+        $("#html").click(function(){
+          $("#htmlp").html("<p>.hpargarap siht esrever ot nottub eht kcilC</p>");
+        })
+        $("#attr").click(function(){
+          var buttonattr = $("#attr").attr("type");
+          $("#appendattr").append(buttonattr);
+        })
+        $("#val").click(function(){
+          var pval = $("#appendval").text();
+          $("#appendval").append(pval);
+        })
       })
     </script>
   </head>
@@ -99,8 +124,38 @@
       </div>
       <div class="jqueries">
         <button type="button" id="addclass">Click me!</button>
-        <h1 id="addclass">.addClass</h1>
+        <h1>.addClass</h1>
         <p>Click the button to add a class to it and change the style.  Also siiick!</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="before">Click me!</button>
+        <h1 id="beforeh1">.before</h1>
+        <p>Click the button to place something before the h1 tag.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="after">Click me!</button>
+        <h1 id="afterh1">.after</h1>
+        <p>Click the button to place something after the h1 tag.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="append">Click me!</button>
+        <h1>.append</h1>
+        <p id="appendp">Click the button to finish thi</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="html">Click me!</button>
+        <h1>.html</h1>
+        <p id="htmlp">Click the button to reverse this paragraph.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="attr">Click me!</button>
+        <h1>.attr</h1>
+        <p id="appendattr">Click the button and this paragraph will show the attributes of said button.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="val">Click me!</button>
+        <h1>.text</h1>
+        <p id="appendval">Click the button and this paragraph will duplicate itself using .text!</p>
       </div>
     </div>
   </body>
