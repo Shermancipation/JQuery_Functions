@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#click").click(function(){
+          alert("A button gets clicked, and you think that of me?");
+        })
+        $("#hide").click(function(){
+          $("#hiddenp").hide("slow",);
+        })
+        $("#show").click(function(){
+          $("#hiddenp").show("slow",);
+        })
+        $("#toggle").click(function(){
+          $("#togglep").toggle("fast",);
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div id="globalwrapper">
+      <div class="jqueries">
+        <button type="button" id="click">Click me!</button>
+        <h1>.click</h1>
+        <p>Click the button and things (or maybe one thing) will happen!</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="hide">Click me!</button>
+        <h1>.hide</h1>
+        <p id="hiddenp">Click the button to hide this paragraph!</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="show">Click me!</button>
+        <h1>.show</h1>
+        <p>Click the button to bring the last paragraph back!</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="toggle">Click me!</button>
+        <h1>.toggle</h1>
+        <p id="togglep">Click the button to TOGGLE THIS PARAGRAPH FAST!!!</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="slidedown">Click me!</button>
+        <h1>.slidedown</h1>
+        <p id="">Click the button to TOGGLE THIS PARAGRAPH FAST!!!</p>
+      </div>
+    </div>
+  </body>
+</html>
