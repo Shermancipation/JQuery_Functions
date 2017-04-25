@@ -19,6 +19,34 @@
         $("#toggle").click(function(){
           $("#togglep").toggle("fast",);
         })
+        $("#slidedownh1").hide();
+        $("#slidedown").click(function(){
+          $("#slidedownh1").slideDown(400, function() {
+            alert("I've done it.");
+// SOMETHING STRANGE HAPPENING WITH POSIIONING WITH HIDE/SLIDEDOWN
+        })
+          })
+        $("#slideuph1").hide();
+        $("#slideup").click(function(){
+          $("#slideuph1").slideUp(400, function() {
+            alert("I've done it again.");
+// SLIDEUP NOT WORKING - SAME POSITIONING PROBLEM AS WELL
+          })
+        })
+        $("#slidetoggleh1").hide();
+        $("#slidetoggle").click(function(){
+          $("#slidetoggleh1").slideToggle(400,);
+        })
+        $("#fadeinh1").hide();
+        $("#fadein").click(function(){
+          $("#fadeinh1").fadeIn("slow",);
+        })
+        $("#fadeout").click(function(){
+          $("#fadeouth1").fadeOut("slow",);
+        })
+        $("#addclass").click(function(){
+          $("#addclass").addClass("addclass");
+        })
       })
     </script>
   </head>
@@ -46,8 +74,33 @@
       </div>
       <div class="jqueries">
         <button type="button" id="slidedown">Click me!</button>
-        <h1>.slidedown</h1>
-        <p id="">Click the button to TOGGLE THIS PARAGRAPH FAST!!!</p>
+        <h1 id="slidedownh1">.slidedown</h1>
+        <p>Click the button to slide down the header this time.  Also, it'll tell you when it's done sliding down.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="slideup">Click me!</button>
+        <h1 id="slideuph1">.slideup</h1>
+        <p>Click the button to slide up the header this time.  Also, it'll tell you when it's done sliding down.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="slidetoggle">Click me!</button>
+        <h1 id="slidetoggleh1">.slidetoggle</h1>
+        <p>Click the button to slide toggle the header.  It probably won't tell you when it's done.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="fadein">Click me!</button>
+        <h1 id="fadeinh1">.fadeIn</h1>
+        <p>Click the button to fade in the header and correct this godawful relative positioning.</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="fadeout">Click me!</button>
+        <h1 id="fadeouth1">.fadeOut</h1>
+        <p>Click the button to fade out this header.  Siiick!</p>
+      </div>
+      <div class="jqueries">
+        <button type="button" id="addclass">Click me!</button>
+        <h1 id="addclass">.addClass</h1>
+        <p>Click the button to add a class to it and change the style.  Also siiick!</p>
       </div>
     </div>
   </body>
